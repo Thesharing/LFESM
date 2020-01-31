@@ -94,7 +94,7 @@ lfesm
 │   ├── feature.py
 │   ├── lfesm.py
 ├── predict.py             # Predict
-├── scripts	               # Utilities
+├── scripts                # Utilities
 │   └── ...
 ├── train.py               # Train
 └── util.py                # Utility function
@@ -119,17 +119,19 @@ Table 2 Experimental results of methods on CAIL2019-SCM
 
 ## Reference
 
-[coetaur0/ESIM](https://github.com/coetaur0/ESIM)
+[1] [coetaur0/ESIM](https://github.com/coetaur0/ESIM)
 
-[padeoe/cail2019](https://github.com/padeoe/cail2019)
+[2] [padeoe/cail2019](https://github.com/padeoe/cail2019)
 
-[thunlp/OpenCLaP](https://github.com/thunlp/OpenCLaP)
+[3] [thunlp/OpenCLaP](https://github.com/thunlp/OpenCLaP)
 
-[CAIL2019-SCM](https://github.com/china-ai-law-challenge/CAIL2019/tree/master/scm)
+[4] [CAIL2019-SCM](https://github.com/china-ai-law-challenge/CAIL2019/tree/master/scm)
 
-[Taoooo9/Cail_Text_similarity_esimtribert](https://github.com/Taoooo9/Cail_Text_similarity_esimtribert)
+[5] [Taoooo9/Cail_Text_similarity_esimtribert](https://github.com/Taoooo9/Cail_Text_similarity_esimtribert)
 
-We sincerely appreciate [Taoooo9](https://github.com/Taoooo9)'s help.
+#### Acknowledgement
+
+We sincerely appreciate [Taoooo9](https://github.com/Taoooo9)‘s help.
 
 ---
 
