@@ -17,15 +17,12 @@ This repository is the source code of the paper *Legal Feature Enhanced Semantic
 
 * Python 3.6+
 * PyTorch 1.1.0+
+* Python requirements: run `pip install -r requirements.txt`.
 * Nvidia Apex (optional): Nvidia Apex enables mixed-precision training to accelerate the training procedure and decrease the memory usage. See [official doc](https://github.com/NVIDIA/apex) for installation. Specify `fp16 = False` in train.py to disable it.
 
-```bash
-pip -r requirements.txt
-```
-
-* Hardware: we recommend to use GPU to train LFESM. In our experiment, when we train the model with batch_size=3, fp16=True on 2\* GeForce RTX 2080, it takes 1~1.5 hour to finish one epoch.
+* Hardware: we recommend to use GPU to train LFESM. In our experiment, when we train the model with `batch_size = 3` and `fp16 = True` on 2\* GeForce RTX 2080, it takes 1~1.5 hour to finish one epoch.
 * Dataset: see [Dataset](#dataset).
-* BERT pretrained model: download the pretrained model [here](https://thunlp.s3.cn-north-1.amazonaws.com.cn/plm/ms.zip), and unzip the model into `./bert` folder. See [OpenCLaP](https://github.com/thunlp/OpenCLaP) for details.
+* BERT pretrained model: download the pretrained model [here](https://thunlp.s3.cn-north-1.amazonaws.com.cn/plm/ms.zip), and unzip the model into `./bert` folder. See [OpenCLaP](https://github.com/thunlp/OpenCLaP) for more details.
 
 ### Train
 
@@ -60,9 +57,9 @@ Run `./scripts/judger.py` to calculate the accuracy score.
 
 ## Dataset
 
-Download the dataset CAIL2019-SCM from [here](https://cail.oss-cn-qingdao.aliyuncs.com/cail2019/CAIL2019-SCM.zip). You can refer to [CAIL2019](https://github.com/china-ai-law-challenge/CAIL2019/tree/master/scm) for more details about the dataset.
+Download the dataset CAIL2019-SCM from [here](https://cail.oss-cn-qingdao.aliyuncs.com/cail2019/CAIL2019-SCM.zip). Check [CAIL2019](https://github.com/china-ai-law-challenge/CAIL2019/tree/master/scm) for more details about the dataset.
 
-Table 1 The amount of data in CAIL2019-SCM
+Table 1: The amount of data in CAIL2019-SCM
 
 | Dataset | sim(a, b)>sim(a,c)​ | sim(a,b)<sim(a,c)​ | Total Amount |
 | ------- | ------------------ | ----------------- | ------------ |
@@ -70,13 +67,13 @@ Table 1 The amount of data in CAIL2019-SCM
 | Valid   | 837                | 663               | 1,500        |
 | Test    | 803                | 733               | 1,536        |
 
-Unzip the dataset and put the train, valid, and test set into `raw`, `valid`, and `test` folder in `./data` folder.
+Unzip the dataset and put the train, valid, and test set into `raw`, `valid`, and `test` folder of `./data` folder.
 
 ### Data Augmentation
 
-To fulfill the distribution of dataset and enhance the performance of model training, we apply data augmentation to augment the data. 
+To fulfill the distribution of dataset and enhance the performance of model training, we apply data augmentation to the dataset. 
 
-Let's denote the original triplet as `(A, B, C)`. We add `(A, C, B)` into the dataset, which makes the amount multiply twice. We also tried other methods like `(B, C, A)` and `(B, A, C)`, but they do not work.
+Let's denote the original triplet as `(A, B, C)`. We add `(A, C, B)` into the dataset, which makes the amount multiply twice. We also tried other methods like `(B, C, A)` and `(B, A, C)`, but they did not work.
 
 ## Project Files
 
@@ -102,7 +99,7 @@ lfesm
 
 ## Results
 
-Table 2 Experimental results of methods on CAIL2019-SCM
+Table 2: Experimental results of methods on CAIL2019-SCM
 
 |              | Method     | Valid     | Test      |
 | ------------ | ---------- | --------- | --------- |
@@ -135,4 +132,4 @@ We sincerely appreciate [Taoooo9](https://github.com/Taoooo9)‘s help.
 
 ---
 
-Author: [Zhilong Hong](https://github.com/Thesharing), [Qifei Zhou](https://github.com/Mrzhouqifei), [Rong Zhang](https://github.com/rzhangpku), Tong Mo, and Weiping Li.
+Author: [Zhilong Hong](https://github.com/Thesharing), [Qifei Zhou](https://github.com/Mrzhouqifei), [Rong Zhang](https://github.com/rzhangpku), Weiping Li, and Tong Mo.
