@@ -111,7 +111,7 @@ Table 2: Experimental results of methods on CAIL2019-SCM
 |              | CNN        | 64.73     | 67.25     |
 | Best Score   | 11.2yuan   | 66.73     | 72.07     |
 |              | backward   | 67.73     | 71.81     |
-|              | AlphaCourt | 70.07     | 74.15     |
+|              | AlphaCourt | 70.07     | 72.66     |
 | Our Method   | LFESM      | **70.01** | **74.15** |
 
 ## Reference
